@@ -1,0 +1,28 @@
+.container{
+    position: relative;
+    width: 640px;
+    height: 360px;
+}
+
+.video{
+    width: 100%; /* Video tendo 100% da largura e altura do pai (neste caso o container)*/
+}
+
+.controles{
+    position: absolute; /* Utilizamos para consguirmos colocar a div por cima do video*/
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.btn{
+    position: relative;
+    width: 30px;
+    padding: 10px;
+    top: 100%; /* 100% para ele ter a distancia de 100% do topo, levando os botoes para debaixo do video*/
+    transform: translateY(-100%); /*Ajustamos usando o tranform, tirando exatamente o tamanho do botão para ele entrar no video*/
+}
+.btn:hover{
+    background-color: white;
+}
