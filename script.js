@@ -31,3 +31,6 @@ function stop(){
     video.currentTime = 0;
     video.playbackRate = 1
 }
+
+
+
