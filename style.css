@@ -9,23 +9,32 @@
     position: relative;
     width: 640px;
     height: 360px;
-    overflow: hidden; /* Utilizado para cortar animação do controle, fazendo com que ele não fique em baixo*/
+    /*overflow: hidden; /* Utilizado para cortar animação do controle, fazendo com que ele não fique em baixo*/
 }
 
 .video{
     width: 100%; /* Video tendo 100% da largura e altura do pai (neste caso o container)*/
 }
 
-.controles{
+.controlesMain{
     position: absolute; /* Utilizamos para conseguirmos colocar a div por cima do video*/
-    bottom: -55px;
-    left: 20%;
-    width: 60%;
+    bottom: -60px;
+    left: 0%;
+    width: 100%;
     max-width: 640px;
     height: 15%;
     text-align: center;
     background-color: rgb(0, 0, 0, 0.5);
     transition: .4s ease-in-out;
+    display: flex;
+    flex-direction: row;
+}
+
+.controles{
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
 }
 
 .btn{
@@ -36,6 +45,45 @@
 .btn:hover{
     background-color: white;
 }
-.container:hover .controles{
+.container:hover .controlesMain{
     bottom: 0;
+}
+
+.controlesEsquerda{
+    display: flex;
+    justify-content: flex-start;
+
+}
+.controlesDireita{
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+}
+
+.barraVideo{
+    display: flex;
+    position: absolute;
+    width: 640px;
+    bottom: 100%;
+    height: 6px;
+    /* border: 1px solid black; */
+}
+
+.progressV{
+    height: 8px;
+    width: 60%;
+}
+
+.tempo{
+    display: flex;
+    margin-top: 17px;
+    font-size: 20px;
+}
+
+.btn-pause{
+    display: none;
+}
+
+.progressVolume{
+    margin-bottom: 17px;
 }

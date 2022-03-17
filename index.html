@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
     <title>Player Video</title>
 </head>
 <body>
@@ -13,14 +14,35 @@
 
         <video id="video1" class="video" src="./assets/+25 Jogadas Criativas e Inteligentes Do Futebol.mp4"></video>
 
-        <div class="controles">
-            <img class="btn" onclick="voltar()" src="./assets/voltar.png">
-            <img class="btn" onclick="avancar()" src="./assets/avançar.png">
-            <img class="btn" onclick="menos()" src="./assets/menos.png">
-            <img class="btn" onclick="mais()" src="./assets/mais.png">
-            <img class="btn" onclick="play()" src="./assets/play.png">
-            <img class="btn" onclick="pause()" src="./assets/pause.png">
-            <img class="btn" onclick="stop()" src="./assets/stop.png">
+        <div class="controlesMain">
+
+            <div class="barraVideo">
+                <progress class="progressV" value="1" max="1"></progress>
+            </div>
+
+            <div class="controles">
+
+                <div class="controlesEsquerda">
+                    <img class="btn" onclick="play()" src="./assets/play.png">
+                    <img class="btn btn-pause" onclick="pause()" src="./assets/pause.png">
+                    <img class="btn" onclick="voltar()" src="./assets/voltar.png">
+                    <img class="btn" onclick="avancar()" src="./assets/avançar.png">
+                    <div class="tempo">
+                        <p class="inicio">0:00</p>
+                        <span> / </span>
+                        <p class="fim">3:40</p>
+                    </div>
+                </div>
+
+                <div class="controlesDireita">
+                    <div class="barraVolume">
+                        <progress class="progressVolume" value="0.9" max="1"></progress>
+                    </div>
+                    <img class="btn" onclick="menos()" src="./assets/menos.png">
+                    <img class="btn" onclick="mais()" src="./assets/mais.png">
+                    <!-- <img class="btn" onclick="stop()" src="./assets/stop.png"> -->
+                </div>
+        </div>
 
         </div>
 
